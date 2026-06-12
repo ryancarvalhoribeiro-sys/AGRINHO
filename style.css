@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0a0e1a;
+  color: #d4e0f0;
+  line-height: 1.6;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 25px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 14, 26, 0.95);
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #f4e14c;
+}
+
+.logo span {
+  color: #7cc6ff;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+nav ul a {
+  color: #d4e0f0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul a:hover {
+  color: #f4e14c;
+}
+
+/* Hero - Noite Estrelada */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(10,14,30,0.75), rgba(10,14,30,0.85)), 
+              url('https://picsum.photos/1920/1080?random=40');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255, 230, 100, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 900px;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  line-height: 1.05;
+  color: #fff;
+  text-shadow: 0 0 30px rgba(244, 225, 76, 0.6);
+  margin-bottom: 25px;
+}
+
+.hero-content p {
+  font-size: 1.45rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  opacity: 0.95;
+}
+
+.btn {
+  padding: 18px 50px;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.4s;
+  background: linear-gradient(90deg, #f4e14c, #7cc6ff);
+  color: #0a0e1a;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(244, 225, 76, 0.7);
+}
+
+/* Seções */
+.section {
+  padding: 110px 8%;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.3rem;
+  text-align: center;
+  margin-bottom: 70px;
+  color: #f4e14c;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+}
+
+.card {
+  background: rgba(20, 25, 45, 0.8);
+  padding: 40px 30px;
+  border-radius: 24px;
+  text-align: center;
+  border: 1px solid #7cc6ff;
+  transition: 0.4s;
+}
+
+.card:hover {
+  border-color: #f4e14c;
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  color: #7cc6ff;
+  margin-bottom: 15px;
+  font-size: 1.7rem;
+}
+
+/* Impacto */
+.impact {
+  background: #0a0e1a;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 50px;
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 3.8rem;
+  color: #f4e14c;
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  background: #05070f;
+  padding: 70px 8% 40px;
+  text-align: center;
+}
+
+.footer-content .logo {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+footer p {
+  opacity: 0.75;
+}
